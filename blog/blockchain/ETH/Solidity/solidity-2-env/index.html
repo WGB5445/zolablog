@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.core.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+    <link rel="icon" href="https://wgb5445.github.io/zolablog/favicon.ico?h=bcf75587c3882a146073ec43645bfa1ccec5fff806187079ead945701579a221">
+    <script defer="defer" src="https://wgb5445.github.io/zolablog/index_bundle.js?h=76e5e73b22430eb465533eaefdebd3890a944b6f5799ace7fe78ac796ee1701c">
+
+    </script>
+    <link href="https://wgb5445.github.io/zolablog/main.css?h=569f495c8ed1633695d06b78cbe9a797a0711a8eb32642a69ca11bac14d8a7b0" rel="stylesheet">
+  </head>
+  <title>WGB's Blog</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https:&#x2F;&#x2F;wgb5445.github.io&#x2F;zolablog">WGB'小破站</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https:&#x2F;&#x2F;wgb5445.github.io&#x2F;zolablog">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/blog">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/tools">Tool</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+            </ul>
+            <button class="btn btn-outline-success me-2" id="wallet_connect" type="button">Connect</button>
+          </div>
+        </div>
+    </nav>
+    
+<div style="background-color: #e4e6eb;">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-8"  style="background-color: #ffffff;">
+          
+          <h1 class="title">
+            
+          </h1>
+  
+          
+
+
+  <h1 class="title" style="padding-bottom: 4px;font-size: 2.5em;line-height: 1.5;">
+    Solidity-2 开发环境
+  </h1>
+  <p class="subtitle"><strong>2022-07-17T14:38:31</strong></p>
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0" >
+    <article>
+      <p>对于 Solidity 的学习，我们有几种方式来开发编译:</p>
+<ul>
+<li>Remix <a href="https://remix.ethereum.org/"> https://remix.ethereum.org/ </a></li>
+<li>solc-js <a href="https://github.com/ethereum/solc-js">https://github.com/ethereum/solc-js</a></li>
+<li>solc <a href="https://github.com/ethereum/solidity">https://github.com/ethereum/solidity</a></li>
+<li>solc docker <a href="https://hub.docker.com/r/ethereum/solc">https://hub.docker.com/r/ethereum/solc</a></li>
+</ul>
+<h3 id="remix">Remix</h3>
+<p>Remix 是一个 在线的 IDE ，可以作为 Solidity 的开发部署环境，图形化的界面十分方便
+可以自由的选择需要的编译器、部署的方式
+部署方式支持：</p>
+<ul>
+<li>Javascript VM 部署</li>
+<li>链接浏览器插件钱包部署</li>
+<li>HardHat 部署</li>
+<li>Truffle 部署</li>
+<li>Wallet Connect 部署</li>
+</ul>
+<p>做开发十分方便，但网站在国外，访问速度较慢</p>
+<h3 id="solc-js">solc-js</h3>
+<p>solc-js 是通过 solc 的代码编译生成的方便js调用的版本，可以作为命令行工具，但是功能较少<br />
+不适合直接使用，可以配合 HardHat 、Truffle 框架作为编译工具</p>
+<p>在学习过程中，可以使用 solc-js 作为编译工具，用来学习 solidity 语法</p>
+<h3 id="solc">solc</h3>
+<p>solc 是 通过 C++ 编写的命令行工具，功能全面，但是日常使用较少<br />
+若无需要，不建议使用</p>
+<p>在学习过程中可以使用 solc 作为工具学习</p>
+<h3 id="solc-docker">solc docker</h3>
+<p>实际上和 solc 的二进制版本类似，通过 docker 运行</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>docker run ethereum/solc:stable --help
+</span></code></pre>
+
+    </article>
+  </div>
+
+
+
+
+        </div>
+        
+        <div class="col-4">
+          <div class="card mb-3" style="max-width: 360px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="..." class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">不霁何虹</h5>
+                  <p class="card-text">Web3.0 builder Move developer</p>
+                  <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+
+          <div class="position-sticky" style="top: 2rem;">
+            <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end"  style="background-color: #ffffff;">
+              <nav class="nav nav-pills flex-column">
+                
+                  <a class="nav-link" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-2-env/#remix">Remix</a>
+                  
+                
+                  <a class="nav-link" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-2-env/#solc-js">solc-js</a>
+                  
+                
+                  <a class="nav-link" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-2-env/#solc">solc</a>
+                  
+                
+                  <a class="nav-link" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-2-env/#solc-docker">solc docker</a>
+                  
+                
+              </nav>
+            </nav>
+          </div>
+
+
+
+
+
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</body>
+
+</html>

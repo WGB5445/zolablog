@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.core.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+    <link rel="icon" href="https://wgb5445.github.io/zolablog/favicon.ico?h=bcf75587c3882a146073ec43645bfa1ccec5fff806187079ead945701579a221">
+    <script defer="defer" src="https://wgb5445.github.io/zolablog/index_bundle.js?h=76e5e73b22430eb465533eaefdebd3890a944b6f5799ace7fe78ac796ee1701c">
+
+    </script>
+    <link href="https://wgb5445.github.io/zolablog/main.css?h=569f495c8ed1633695d06b78cbe9a797a0711a8eb32642a69ca11bac14d8a7b0" rel="stylesheet">
+  </head>
+  <title>WGB's Blog</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https:&#x2F;&#x2F;wgb5445.github.io&#x2F;zolablog">WGB'小破站</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https:&#x2F;&#x2F;wgb5445.github.io&#x2F;zolablog">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/blog">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/tools">Tool</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+            </ul>
+            <button class="btn btn-outline-success me-2" id="wallet_connect" type="button">Connect</button>
+          </div>
+        </div>
+    </nav>
+    
+<div style="background-color: #e4e6eb;">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-8"  style="background-color: #ffffff;">
+          
+          <h1 class="title">
+            
+          </h1>
+  
+          
+
+
+  <h1 class="title" style="padding-bottom: 4px;font-size: 2.5em;line-height: 1.5;">
+    Solidity-3 编译简单合约并交互
+  </h1>
+  <p class="subtitle"><strong>2022-07-23T17:20:44</strong></p>
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0" >
+    <article>
+      <p>初学者和大部分简单的部署都可以使用 Remix 作为开发调试环境</p>
+<h3 id="jin-ru-remix">进入 Remix</h3>
+<p>进入 <a href="https://remix.ethereum.org/"> https://remix.ethereum.org/ </a></p>
+<h3 id="bian-ji-dai-ma">编辑代码</h3>
+<p>在 File explorer 中编辑 contracts 文件夹中的 1_Storage.sol</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>// SPDX-License-Identifier: GPL-3.0
+</span><span>
+</span><span>pragma solidity &gt;=0.7.0 &lt;0.9.0;
+</span><span>
+</span><span>/**
+</span><span> * @title Storage
+</span><span> * @dev Store &amp; retrieve value in a variable
+</span><span> * @custom:dev-run-script ./scripts/deploy_with_ethers.ts
+</span><span> */
+</span><span>contract Storage {
+</span><span>
+</span><span>    uint256 number;
+</span><span>
+</span><span>    /**
+</span><span>     * @dev Store value in variable
+</span><span>     * @param num value to store
+</span><span>     */
+</span><span>    function store(uint256 num) public {
+</span><span>        number = num;
+</span><span>    }
+</span><span>
+</span><span>    /**
+</span><span>     * @dev Return value 
+</span><span>     * @return value of &#39;number&#39;
+</span><span>     */
+</span><span>    function retrieve() public view returns (uint256){
+</span><span>        return number;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="bian-yi">编译</h3>
+<h4 id="xuan-ze-0-8-15-bian-yi-qi">选择 0.8.15 编译器</h4>
+<p>点击左侧栏中的 solidity compiler 并选择 Compiler 中的 0.8.15+commit.e14f2714</p>
+<h4 id="bian-yi-1">编译</h4>
+<p>点击下方的 Compile 1_Storage.sol</p>
+<h3 id="bu-shu">部署</h3>
+<p>点击左侧栏中的Deploy &amp; Run transactions，选择 ENVIRONMENT 中的 Remix VM (London) 并在 Contract 选择 Storage - contracts/1_Storage.sol 点击 Deploy</p>
+<h3 id="he-yue-jiao-hu">合约交互</h3>
+<h4 id="store">store</h4>
+<p>在下方 Deployed Contracts 中输入一个数字 并点击 store ，可以将数字存储在合约中</p>
+<h4 id="retrieve">retrieve</h4>
+<p>点击 retrieve 可以读取 store 的数字 </p>
+
+    </article>
+  </div>
+
+
+
+
+        </div>
+        
+        <div class="col-4">
+          <div class="card mb-3" style="max-width: 360px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="..." class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">不霁何虹</h5>
+                  <p class="card-text">Web3.0 builder Move developer</p>
+                  <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+
+          <div class="position-sticky" style="top: 2rem;">
+            <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end"  style="background-color: #ffffff;">
+              <nav class="nav nav-pills flex-column">
+                
+                  <a class="nav-link" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-3-run/#jin-ru-remix">进入 Remix</a>
+                  
+                
+                  <a class="nav-link" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-3-run/#bian-ji-dai-ma">编辑代码</a>
+                  
+                
+                  <a class="nav-link" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-3-run/#bian-yi">编译</a>
+                  
+                    <nav class="nav nav-pills flex-column">
+                    
+                      <a class="nav-link ms-3 my-1" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-3-run/#xuan-ze-0-8-15-bian-yi-qi">选择 0.8.15 编译器</a>
+                    
+                      <a class="nav-link ms-3 my-1" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-3-run/#bian-yi-1">编译</a>
+                    
+                  
+                
+                  <a class="nav-link" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-3-run/#bu-shu">部署</a>
+                  
+                
+                  <a class="nav-link" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-3-run/#he-yue-jiao-hu">合约交互</a>
+                  
+                    <nav class="nav nav-pills flex-column">
+                    
+                      <a class="nav-link ms-3 my-1" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-3-run/#store">store</a>
+                    
+                      <a class="nav-link ms-3 my-1" href="https://wgb5445.github.io/zolablog/blog/blockchain/ETH/Solidity/solidity-3-run/#retrieve">retrieve</a>
+                    
+                  
+                
+              </nav>
+            </nav>
+          </div>
+
+
+
+
+
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</body>
+
+</html>
