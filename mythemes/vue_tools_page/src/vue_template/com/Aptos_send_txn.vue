@@ -51,7 +51,7 @@
         </p>
 
         <n-space vertical>
-            <n-select
+          Function:  <n-select
             v-model:value="selectedFunction"
             filterable
             placeholder="选择 Function"
