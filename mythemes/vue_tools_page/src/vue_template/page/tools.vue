@@ -25,6 +25,7 @@
             <!-- <n-button id="setEVM_Network" @click="click">添加EVM网络</n-button>
             <n-button id="setAptos_get_address" @click="click">计算Aptos地址</n-button> -->
             <n-button id="Aptos_send_txn" @click="click">Aptos 交易发送</n-button>
+            <n-button id="Aptos_Mint" @click="click">Aptos Mint</n-button>
           </n-layout-sider>
           <n-layout content-style="padding: 24px;" :native-scrollbar="false">
             <component :is="current"></component>
@@ -58,11 +59,13 @@
   import setAptos_get_address from '../com/setAptos_get_address.vue'
   import setEVM_Network from '../com/setEVM_Network.vue'
   import Aptos_send_txn from '../com/Aptos_send_txn.vue'
-  const current = shallowRef(Aptos_send_txn)
+  import Aptos_Mint from '../com/mint.vue'
+  const current = shallowRef(Aptos_Mint)
   let components = {
     'setEVM_Network':setEVM_Network,
     'setAptos_get_address':setAptos_get_address,
-    'Aptos_send_txn':Aptos_send_txn
+    'Aptos_send_txn':Aptos_send_txn,
+    'Aptos_Mint':Aptos_Mint
   }; 
   function click(event){
     current.value = components[event.currentTarget.id]
