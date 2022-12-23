@@ -14,6 +14,14 @@
         <n-button @click="wallet_send('Sw33t Friends - Eyes')">
           mint 1 个 Eyes
         </n-button>
+        <p></p>
+        <n-button @click="wallet_send('Sw33t Friends - Tail')">
+          mint 1 个 Tail
+        </n-button>
+        <p></p>
+        <n-button @click="wallet_send('Sw33t Friends - Ears')">
+          mint 1 个 Ears
+        </n-button>
         </div>
       </div>
 
