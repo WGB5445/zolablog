@@ -19,7 +19,7 @@
           mint 1 个 Tail
         </n-button>
         <p></p>
-        <n-button @click="wallet_send('Sw33t Friends - Ears')">
+        <n-button @click="wallet_send('Sw33t Friends - Ear')">
           mint 1 个 Ears
         </n-button>
         </div>
