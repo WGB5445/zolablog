@@ -1,4 +1,4 @@
 +++
-title = "Home"
-template = "home.html"
+paginate_by = 3
+sort_by = "date"
 +++

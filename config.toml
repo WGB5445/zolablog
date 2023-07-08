@@ -1,24 +1,35 @@
 # The URL the site will be built for
 base_url = "/"
-
+title = "不霁何虹的博客"
+description = "一些 Web3.0 和 一些 有趣的事情"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
+theme = "zola_brief_theme"
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
-
-taxonomies = [
-    { name = "director", feed = true},
-    { name = "genres", feed = true},
-    { name = "awards", feed = true},
-    { name = "release-year", feed = true},
-]
 
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+highlight_theme = "base16-ocean-dark"
+
 
 [extra]
-# Put all your custom variables here
-
+author="不霁何虹"
+description="A brief blog theme"
+brief_sticky = true
+brief_reverse = false
+brief_theme = ""
+brief_links = [
+    {url = "https://google.com", name = "About"},
+]
+brief_menus = [
+    {url = "",name = "Home"},
+    {url = "archives",name = "Archives"},
+    {url = "tags",name = "Tags"},
+    {url = "categories",name = "Categories"},
+    {url = "link",name = "Link"},
+    {url = "about",name = "About"},
+]
