@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{%- block recent_posts %}
+    <div class="page">
+        <h2 class="page-title">{{ term.name }}</h2>
+        <div class="category-times">
+            {%- for year, posts in term.pages | group_by(attribute="year") %}
+                <h3>{{ year }}</h3>
+                <div class="category-pages">
+                    {%- for page in posts %}
+                        <p class="category-page"><a href="{{ page.permalink | safe }}">{{ page.title }}</a> - <time datetime="{{ page.date }}">{{ page.date | date(format="%F") }}</time></p>
+                    {%- endfor %}
+                </div>
+            {%- endfor %}
+        </div>
+    </div>
+{%- endblock recent_posts %}

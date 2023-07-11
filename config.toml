@@ -30,7 +30,6 @@ brief_links = [
 ]
 brief_menus = [
     {url = "",name = "Home"},
-    {url = "archives",name = "Archives"},
     {url = "tags",name = "Tags"},
     {url = "categories",name = "Categories"},
     {url = "link",name = "Link"},

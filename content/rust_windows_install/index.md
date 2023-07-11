@@ -1,8 +1,11 @@
----
-title: Windows 上用国内源安装Rust
-date: 2022-05-08 08:57:59
-tags:
----
++++
+title="Windows 上用国内源安装Rust"
+date="2022-05-08 08:57:59"
+
+[taxonomies]
+Categories=['Rust']
+Tags=['Rust','Windows']
++++
 ## 一、获取安装包
 - 在Rust官网上下载安装包  
 [官网链接](https://www.rust-lang.org/zh-CN/):https://www.rust-lang.org/zh-CN/

@@ -5,7 +5,8 @@ date= 2022-07-10
 tags= ["以太坊","solidity"]
 [extra]
 toc = true
-
+[taxonomies]
+Categories=['Solidity']
 +++
 Solidity 是一种面向合约的高级编程语言，用于实现智能合约。Solidity 受到 C++，Python和JavaScript 的影响，旨在针对以太坊虚拟机（EVM）。
 

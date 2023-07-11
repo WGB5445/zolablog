@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{%- block recent_posts %}
+    <div class="page">
+        <h2 class="page-title">All {{ terms | length }} Tags</h2>
+        <div class="category-lists">
+            <ul class="category-list">
+                {%- for term in terms %}
+                    <li class="category-list-item" id="{{ term.name }}"><a class="category-list-link" href="{{ term.permalink | safe }}">{{ term.name }} </a><span class="category-list-count">({{ term.pages | length}})</span></li>
+                    <!-- {%- for page in term.pages %}
+                        <p><a href="{{ page.permalink | safe }}">{{ page.title }}</a> - <time datetime="{{ page.date }}">{{ page.date | date(format="%F") }}</time></p>
+                    {%- endfor %} -->
+                {%- endfor %}
+            </ul>
+        </div>
+    </div>
+{%- endblock recent_posts %}
