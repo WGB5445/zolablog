@@ -22,6 +22,8 @@ highlight_theme = "base16-ocean-dark"
 [extra]
 author="不霁何虹"
 description="A brief blog theme"
+brief_copyright="©2020 - 2023 By 不霁何虹"
+brief_favicon="https://arweave.net/mFFcgeIoLnhzQDYAHTYHkQ1eEYVwO9XvU7GitAUnq4U"
 brief_sticky = true
 brief_reverse = false
 brief_theme = ""

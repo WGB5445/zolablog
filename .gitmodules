@@ -1,3 +1,4 @@
 [submodule "themes/zola_brief_theme"]
 	path = themes/zola_brief_theme
 	url = https://github.com/WGB5445/zola_brief_theme.git
+	branch = main
