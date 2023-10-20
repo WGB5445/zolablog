@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>不霁何虹的博客 - Solidity</title>
     <subtitle>一些 Web3.0 和 一些 有趣的事情</subtitle>
-    <link href="/categories/solidity/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="/"/>
+    <link href="./categories/solidity/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="./"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2022-07-10T00:00:00+00:00</updated>
-    <id>/categories/solidity/atom.xml</id>
+    <id>./categories/solidity/atom.xml</id>
     <entry xml:lang="en">
         <title>Solidity-1 简要概述</title>
         <published>2022-07-10T00:00:00+00:00</published>
@@ -14,8 +14,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="/solidity-sample-1/" type="text/html"/>
-        <id>/solidity-sample-1/</id>
+        <link rel="alternate" href="./solidity-sample-1/" type="text/html"/>
+        <id>./solidity-sample-1/</id>
         
         <content type="html">&lt;p&gt;Solidity 是一种面向合约的高级编程语言，用于实现智能合约。Solidity 受到 C++，Python和JavaScript 的影响，旨在针对以太坊虚拟机（EVM）。&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;shi-yao-shi-yi-tai-fang&quot;&gt;什么是以太坊？&lt;&#x2F;h2&gt;
