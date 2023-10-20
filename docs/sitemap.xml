@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>./</loc>
+        <loc>https://wgb5445.github.io/zolablog/</loc>
     </url>
     <url>
-        <loc>./Categories/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Categories/</loc>
     </url>
     <url>
-        <loc>./Categories/aptos-move-tutorial/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Categories/aptos-move-tutorial/</loc>
     </url>
     <url>
-        <loc>./Categories/rust/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Categories/rust/</loc>
     </url>
     <url>
-        <loc>./Categories/solidity/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Categories/solidity/</loc>
     </url>
     <url>
-        <loc>./Categories/solidjs/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Categories/solidjs/</loc>
     </url>
     <url>
-        <loc>./Tags/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Tags/</loc>
     </url>
     <url>
-        <loc>./Tags/aptos/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Tags/aptos/</loc>
     </url>
     <url>
-        <loc>./Tags/html/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Tags/html/</loc>
     </url>
     <url>
-        <loc>./Tags/javascript/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Tags/javascript/</loc>
     </url>
     <url>
-        <loc>./Tags/move/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Tags/move/</loc>
     </url>
     <url>
-        <loc>./Tags/rust/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Tags/rust/</loc>
     </url>
     <url>
-        <loc>./Tags/typescript/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Tags/typescript/</loc>
     </url>
     <url>
-        <loc>./Tags/windows/</loc>
+        <loc>https://wgb5445.github.io/zolablog/Tags/windows/</loc>
     </url>
     <url>
-        <loc>./aptos-move-1/</loc>
+        <loc>https://wgb5445.github.io/zolablog/aptos-move-1/</loc>
         <lastmod>2023-07-18T23:57:05</lastmod>
     </url>
     <url>
-        <loc>./page/1/</loc>
+        <loc>https://wgb5445.github.io/zolablog/page/1/</loc>
     </url>
     <url>
-        <loc>./page/2/</loc>
+        <loc>https://wgb5445.github.io/zolablog/page/2/</loc>
     </url>
     <url>
-        <loc>./rust-windows-install/</loc>
+        <loc>https://wgb5445.github.io/zolablog/rust-windows-install/</loc>
         <lastmod>2022-05-08T08:57:59</lastmod>
     </url>
     <url>
-        <loc>./solid-js-1/</loc>
+        <loc>https://wgb5445.github.io/zolablog/solid-js-1/</loc>
         <lastmod>2023-07-22T19:04:23</lastmod>
     </url>
     <url>
-        <loc>./solidity-sample-1/</loc>
+        <loc>https://wgb5445.github.io/zolablog/solidity-sample-1/</loc>
         <lastmod>2022-07-10</lastmod>
     </url>
 </urlset>

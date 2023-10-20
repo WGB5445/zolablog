@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>不霁何虹的博客 - Rust</title>
     <subtitle>一些 Web3.0 和 一些 有趣的事情</subtitle>
-    <link href="./tags/rust/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="./"/>
+    <link href="https://wgb5445.github.io/zolablog/tags/rust/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://wgb5445.github.io/zolablog"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2022-05-08T08:57:59+00:00</updated>
-    <id>./tags/rust/atom.xml</id>
+    <id>https://wgb5445.github.io/zolablog/tags/rust/atom.xml</id>
     <entry xml:lang="en">
         <title>Windows 上用国内源安装Rust</title>
         <published>2022-05-08T08:57:59+00:00</published>
@@ -14,8 +14,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="./rust-windows-install/" type="text/html"/>
-        <id>./rust-windows-install/</id>
+        <link rel="alternate" href="https://wgb5445.github.io/zolablog/rust-windows-install/" type="text/html"/>
+        <id>https://wgb5445.github.io/zolablog/rust-windows-install/</id>
         
         <content type="html">&lt;h2 id=&quot;yi-huo-qu-an-zhuang-bao&quot;&gt;一、获取安装包&lt;&#x2F;h2&gt;
 &lt;ul&gt;
